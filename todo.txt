@@ -1,0 +1,19 @@
+todo:
+hands only
+IK investigation
+inventory on left hand
+both hands grab
+disable prompt
+turn off resolution scaling
+
+https://www.reddit.com/r/HiTMAN/comments/s9az9q/vr_improvement/
+
+paris sink 007C4BC658C10D74 
+[assembly:/_pro/design/setpieces/setpieces_traps.template?/setpiecehelper_trap_water_overflowingsink.entitytemplate].pc_entitytype 008E91D2D82F1E6F 
+
+VR button : 00825F74FC89375F
+
+zvrhitmanishandprimedcondition
+
+done:
+- fire alarm

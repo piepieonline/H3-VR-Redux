@@ -1,0 +1,486 @@
+{
+    "tempHash": "00AEBE14B6162F3C",
+    "tbluHash": "00D944A93F5FE0D1",
+    "patch": [
+        {
+            "AddEntity": [
+                "feedc91841096696",
+                {
+                    "parent": "3938064ec4785641",
+                    "name": "VR",
+                    "factory": "[modules:/zentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed0a495dd60a98",
+                {
+                    "parent": "feedc91841096696",
+                    "name": "Crowbar",
+                    "factory": "[modules:/zentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed39f0accaffb2",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "VRHelper_Hand_Activator",
+                    "factory": "[assembly:/_pro/design/gamecore/vrhelpers.template?/vrhelper_hand_activator.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/_pro/design/gamecore/vrhelpers.template?/vrhelper_hand_activator.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_bIsIllegal": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_bIsSevere": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_mTransform": {
+                            "type": "SMatrix43",
+                            "value": {
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 90
+                                },
+                                "position": {
+                                    "x": -0.45,
+                                    "y": -0.05,
+                                    "z": 1
+                                }
+                            }
+                        },
+                        "m_vGlobalSize": {
+                            "type": "SVector3",
+                            "value": {
+                                "x": 2,
+                                "y": 2,
+                                "z": 2
+                            }
+                        },
+                        "Usable": {
+                            "type": "TArray<SEntityTemplateReference>",
+                            "value": [
+                                "feedd35294976ea6"
+                            ]
+                        },
+                        "m_eidParent": {
+                            "type": "SEntityTemplateReference",
+                            "value": "3938064ec4785641",
+                            "postInit": true
+                        }
+                    },
+                    "events": {
+                        "OnPressed": {
+                            "Poll": [
+                                "feed0b3731181845"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed617d936fd5f2",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "HitmanDamageOverTime",
+                    "factory": "[modules:/zhitmandamageovertime.class].pc_entitytype",
+                    "blueprint": "[modules:/zhitmandamageovertime.class].pc_entityblueprint",
+                    "properties": {
+                        "m_fInterval": {
+                            "type": "float32",
+                            "value": 0.5
+                        },
+                        "m_fDamage": {
+                            "type": "float32",
+                            "value": 15
+                        },
+                        "m_Boxes": {
+                            "type": "TArray<SEntityTemplateReference>",
+                            "value": [
+                                "feed5d5697d2f327"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedd35294976ea6",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "VB_Usable",
+                    "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_bValue": {
+                            "type": "bool",
+                            "value": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed5d5697d2f327",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "VolumeBox",
+                    "factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+                    "properties": {
+                        "m_mTransform": {
+                            "type": "SMatrix43",
+                            "value": {
+                                "rotation": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                },
+                                "position": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "z": 0
+                                }
+                            }
+                        },
+                        "m_vGlobalSize": {
+                            "type": "SVector3",
+                            "value": {
+                                "x": 4,
+                                "y": 4,
+                                "z": 4
+                            }
+                        },
+                        "m_eidParent": {
+                            "type": "SEntityTemplateReference",
+                            "value": "34fc5cc7d674d750"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedac3b5266c519",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "IsRightHandPrimed",
+                    "factory": "[modules:/zvrhitmanishandprimedcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zvrhitmanishandprimedcondition.class].pc_entityblueprint",
+                    "properties": {
+                        "m_hand": {
+                            "type": "EHeroHand",
+                            "value": "Right"
+                        },
+                        "m_shouldIgnorePistolWhip": {
+                            "type": "bool",
+                            "value": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed0b3731181845",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "IsCrowbarReady_VBP",
+                    "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_rValueEntity": {
+                            "type": "SEntityTemplateReference",
+                            "value": "feed9d7ad87019fe"
+                        }
+                    },
+                    "events": {
+                        "PollTrue": {
+                            "Activate": [
+                                "feed617d936fd5f2"
+                            ]
+                        }
+                    },
+                    "outputCopying": {
+                        "PollTrue": {
+                            "OnActivate": [
+                                "efe1e8027df71005"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed9d7ad87019fe",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "IsHandPrimedAndHoldingCrowbar_VBO",
+                    "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_aValues": {
+                            "type": "TArray<SEntityTemplateReference>",
+                            "value": [
+                                "feedac3b5266c519",
+                                "feedf6cc66aea79c"
+                            ],
+                            "postInit": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedf6cc66aea79c",
+                {
+                    "parent": "feed0a495dd60a98",
+                    "name": "IsHoldingCrowbar_VBO",
+                    "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_aValues": {
+                            "type": "TArray<SEntityTemplateReference>",
+                            "value": [
+                                "feed1affe48dc544",
+                                "feedb9e7f91c10ca",
+                                "feedc8d5a016b88e",
+                                "feed56786dde007d",
+                                "feedeefbc7cdee2a"
+                            ],
+                            "postInit": true
+                        },
+                        "m_eEvaluation": {
+                            "type": "ZValueBool_Operation_Signal.EEvaluationType",
+                            "value": "ANY"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feeda587ec4cadae",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "ItemKey Crowbar",
+                    "factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+                    "properties": {
+                        "m_RepositoryId": {
+                            "type": "ZGuid",
+                            "value": "01ed6d15-e26e-4362-b1a6-363684a7d0fd"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedb9e7f91c10ca",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "Holding CrowbarGL2",
+                    "factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+                    "properties": {
+                        "m_ItemKeyToFind": {
+                            "type": "SEntityTemplateReference",
+                            "value": "feed4b56ddb9c03b"
+                        },
+                        "m_bCheckEquippedItem": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_bCheckInventory": {
+                            "type": "bool",
+                            "value": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed4b56ddb9c03b",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "ItemKey CrowbarGL2",
+                    "factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+                    "properties": {
+                        "m_RepositoryId": {
+                            "type": "ZGuid",
+                            "value": "09d66de2-c14c-4c5a-9b85-d1c7e9c2a3e1"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feeda7ba0e0d9594",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "ItemKey CrowbarXmas",
+                    "factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+                    "properties": {
+                        "m_RepositoryId": {
+                            "type": "ZGuid",
+                            "value": "5ffda47b-f445-44c7-8812-8d7e39e4928c"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedd44ff215b920",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "ItemKey CrowbarProf",
+                    "factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+                    "properties": {
+                        "m_RepositoryId": {
+                            "type": "ZGuid",
+                            "value": "736132de-78f3-4366-b927-ed9a401dbe26"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed9713f19188ab",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "ItemKey CrowbarGL2Rusty",
+                    "factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+                    "properties": {
+                        "m_RepositoryId": {
+                            "type": "ZGuid",
+                            "value": "5774f9ff-0ed3-44e0-8208-ec29eac070c1"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed56786dde007d",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "Holding CrowbarProf",
+                    "factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+                    "properties": {
+                        "m_ItemKeyToFind": {
+                            "type": "SEntityTemplateReference",
+                            "value": "feedd44ff215b920"
+                        },
+                        "m_bCheckEquippedItem": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_bCheckInventory": {
+                            "type": "bool",
+                            "value": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed1affe48dc544",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "Holding Crowbar",
+                    "factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+                    "properties": {
+                        "m_ItemKeyToFind": {
+                            "type": "SEntityTemplateReference",
+                            "value": "feeda587ec4cadae"
+                        },
+                        "m_bCheckEquippedItem": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_bCheckInventory": {
+                            "type": "bool",
+                            "value": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedc8d5a016b88e",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "Holding CrowbarGL2Rusty",
+                    "factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+                    "properties": {
+                        "m_ItemKeyToFind": {
+                            "type": "SEntityTemplateReference",
+                            "value": "feed9713f19188ab"
+                        },
+                        "m_bCheckEquippedItem": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_bCheckInventory": {
+                            "type": "bool",
+                            "value": false
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feedeefbc7cdee2a",
+                {
+                    "parent": "feedf6cc66aea79c",
+                    "name": "Holding CrowbarXmas",
+                    "factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+                    "properties": {
+                        "m_ItemKeyToFind": {
+                            "type": "SEntityTemplateReference",
+                            "value": "feeda7ba0e0d9594"
+                        },
+                        "m_bCheckEquippedItem": {
+                            "type": "bool",
+                            "value": true
+                        },
+                        "m_bCheckInventory": {
+                            "type": "bool",
+                            "value": false
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "patchVersion": 6
+}
