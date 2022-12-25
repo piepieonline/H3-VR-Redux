@@ -15,5 +15,11 @@ VR button : 00825F74FC89375F
 
 zvrhitmanishandprimedcondition
 
+in progress:
+- doors
+-- door to door helper generic
+-- remove damage hitman element
+-- crowbar missing SFX
+
 done:
 - fire alarm
