@@ -17,9 +17,12 @@ zvrhitmanishandprimedcondition
 
 in progress:
 - doors
--- door to door helper generic
--- remove damage hitman element
--- crowbar missing SFX
+-- remove damage hitman element (currently hidden below ground at least)
+-- parent to unlock points?
+-- check SFX? might need to replace CrowbarCompleted with CrowbarSound02
+
+- VRHelper_Hand_Activator
+-- Remove button marker
 
 done:
 - fire alarm
