@@ -5,5 +5,14 @@
 	"contentFolders": ["content/default", "content/interactables"],
 	"description": "Modifies how the game works in VR to be more natural, and less button based.",
 	"authors": ["piepieonline"],
-	"frameworkVersion": "2.4.0"
+	"frameworkVersion": "2.4.0",
+	"localisation": {
+		"english": {
+			"ui_prop_key_vr_master_key_name" : "Virtual Key",
+			"ui_prop_key_vr_master_key_desc" : "Virtual Key, used to open any doors you have the key for",
+			"ui_prop_key_vr_master_swipecard_name" : "Virtual Keycard",
+			"ui_prop_key_vr_master_swipecard_desc" : "Virtual Keycard, used to operate any keycard readers you have the keycard for"
+		}
+	},
+	"thumbs": ["ConsoleCmd OnlineResources_Disable 1"]
 }

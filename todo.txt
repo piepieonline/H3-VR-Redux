@@ -24,12 +24,6 @@ VR Camera: 006143A5FFC8BF5D
 47 DEFAULT: 00D347CBA29EE6BA
 
 in progress:
-- doors
--- physical 'master' key that works if you have the right key
-
-- swipe cards
--- physical 'master' card that works if you have the right card
-
 - VRHelper_Hand_Activator
 -- Remove button marker, add the same marker as sphere
 
@@ -38,3 +32,4 @@ in progress:
 
 done:
 - fire alarm
+- doors
