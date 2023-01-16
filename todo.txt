@@ -25,13 +25,16 @@ VR Camera: 006143A5FFC8BF5D
 
 in progress:
 - doors
--- check SFX? might need to replace CrowbarCompleted with CrowbarSound02
+-- physical 'master' key that works if you have the right key
 
 - swipe cards
--- physical swipe if you have one
+-- physical 'master' card that works if you have the right card
 
 - VRHelper_Hand_Activator
--- Remove button marker, add the same hovering thing as inventory (optional)?
+-- Remove button marker, add the same marker as sphere
+
+- VRHelper_Hand_Activator_Sphere
+-- Only show marker in VR, not flatscreen
 
 done:
 - fire alarm
