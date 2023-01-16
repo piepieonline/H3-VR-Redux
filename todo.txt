@@ -11,18 +11,27 @@ https://www.reddit.com/r/HiTMAN/comments/s9az9q/vr_improvement/
 paris sink 007C4BC658C10D74 
 [assembly:/_pro/design/setpieces/setpieces_traps.template?/setpiecehelper_trap_water_overflowingsink.entitytemplate].pc_entitytype 008E91D2D82F1E6F 
 
+SetPiece_Activator_Winch_Large - 00C83AEA108FD320
+
 VR button : 00825F74FC89375F
 
 zvrhitmanishandprimedcondition
 
+VR Setup Brick: 008B123DE8995815 
+VR Camera: 006143A5FFC8BF5D
+
+
+47 DEFAULT: 00D347CBA29EE6BA
+
 in progress:
 - doors
--- remove damage hitman element (currently hidden below ground at least)
--- parent to unlock points?
 -- check SFX? might need to replace CrowbarCompleted with CrowbarSound02
 
+- swipe cards
+-- physical swipe if you have one
+
 - VRHelper_Hand_Activator
--- Remove button marker
+-- Remove button marker, add the same hovering thing as inventory (optional)?
 
 done:
 - fire alarm
