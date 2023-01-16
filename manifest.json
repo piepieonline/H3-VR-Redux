@@ -2,7 +2,7 @@
 	"version": "0.0.1",
 	"id": "piepieonline.VRReworked",
 	"name": "VR Reworked",
-	"contentFolders": ["content"],
+	"contentFolders": ["content/default", "content/interactables"],
 	"description": "Modifies how the game works in VR to be more natural, and less button based.",
 	"authors": ["piepieonline"],
 	"frameworkVersion": "2.4.0"
