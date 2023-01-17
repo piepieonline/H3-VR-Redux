@@ -11,6 +11,12 @@ https://www.reddit.com/r/HiTMAN/comments/s9az9q/vr_improvement/
 paris sink 007C4BC658C10D74 
 [assembly:/_pro/design/setpieces/setpieces_traps.template?/setpiecehelper_trap_water_overflowingsink.entitytemplate].pc_entitytype 008E91D2D82F1E6F 
 
+Prop searching
+findstr /i /m "UseLeftHandItem" *.entity.JSON
+findstr /i /m "eHolsterAbility" *.entity.JSON
+findstr /i /m "m_rKeywordsToFind" *.entity.JSON
+findstr /i /m "UseInventory" *.entity.JSON
+
 
 zvrenabledcondition
 zherodontdrawinmaincamera - once rotation is following
