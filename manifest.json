@@ -1,31 +1,56 @@
 {
 	"version": "0.0.1",
-	"id": "piepieonline.VRReworked",
-	"name": "VR Reworked",
+	"id": "piepieonline.VRRedux",
+	"name": "VR Redux",
 	"contentFolders": [
 		"content/default",
 		"content/virtualkeys",
 		"content/interactables"
 	],
-	"description": "Modifies how the game works in VR to be more natural, and less button based.",
-	"authors": ["piepieonline"],
+	"description": "A collection of VR related tweaks, trying to make the game more `VR native`.",
+	"authors": [
+		"piepieonline"
+	],
 	"frameworkVersion": "2.4.0",
 	"localisation": {
 		"english": {
-			"ui_prop_key_vr_master_key_name" : "Virtual Key",
-			"ui_prop_key_vr_master_key_desc" : "Virtual Key, used to open any doors you have the key for",
-			"ui_prop_key_vr_master_swipecard_name" : "Virtual Keycard",
-			"ui_prop_key_vr_master_swipecard_desc" : "Virtual Keycard, used to operate any keycard readers you have the keycard for"
+			"ui_prop_key_vr_master_key_name": "Virtual Key",
+			"ui_prop_key_vr_master_key_desc": "Virtual Key, used to open any doors you have the key for",
+			"ui_prop_key_vr_master_swipecard_name": "Virtual Keycard",
+			"ui_prop_key_vr_master_swipecard_desc": "Virtual Keycard, used to operate any keycard readers you have the keycard for"
 		}
 	},
-	"thumbs": ["ConsoleCmd OnlineResources_Disable 1"],
+	"thumbs": [
+		"ConsoleCmd OnlineResources_Disable 1"
+	],
 	"options": [
 		{
 			"name": "Smaller head collider",
-			"tooltip": "Shrinks the size of 47's head collider, making ",
+			"tooltip": "Shrinks the size of 47's head collider, making agility areas easier to use",
 			"type": "checkbox",
 			"enabledByDefault": true,
-			"contentFolders": ["content/tinyheadcollider"]
+			"contentFolders": [
+				"content/tinyheadcollider"
+			]
+		},
+		{
+			"name": "Disable interaction zone visual aid",
+			"tooltip": "Disables the highlight zones when a VR interaction is available (Might make it harder to find the sweet spot)",
+			"type": "checkbox",
+			"enabledByDefault": false,
+			"contentFolders": [
+				"content/interactables_option_nozone"
+			]
+		},
+		{
+			"name": "Disable key and keycard autoequip",
+			"tooltip": "Disables the automatic equipping of the Virtual Key and Keycard when approaching locked doors",
+			"type": "checkbox",
+			"enabledByDefault": false,
+			"contentFolders": [
+				"content/interactables_option_noautoequip"
+			]
 		}
-	]
+	],
+	"updateCheck": "https://raw.githubusercontent.com/piepieonline/h3-vr-redux/main/version.json"
 }
