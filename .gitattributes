@@ -1,0 +1,2 @@
+*.json merge=json_merge
+*.json difftool=diff_json

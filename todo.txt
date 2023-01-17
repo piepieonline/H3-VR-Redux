@@ -11,6 +11,10 @@ https://www.reddit.com/r/HiTMAN/comments/s9az9q/vr_improvement/
 paris sink 007C4BC658C10D74 
 [assembly:/_pro/design/setpieces/setpieces_traps.template?/setpiecehelper_trap_water_overflowingsink.entitytemplate].pc_entitytype 008E91D2D82F1E6F 
 
+
+zvrenabledcondition
+zherodontdrawinmaincamera - once rotation is following
+
 SetPiece_Activator_Winch_Large - 00C83AEA108FD320
 
 VR button : 00825F74FC89375F
@@ -30,6 +34,18 @@ in progress:
 - VRHelper_Hand_Activator_Sphere
 -- Only show marker in VR, not flatscreen
 
+- Camera console
+
+- doors
+-- rusty crowbar
+-- auto equip key as option when close
+
+- hip holster for a weapon
+
+- (evergreen)
+-- menu zoom hud on trigger
+
 done:
 - fire alarm
 - doors
+- tiny head collision size

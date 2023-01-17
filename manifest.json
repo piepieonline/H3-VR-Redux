@@ -2,7 +2,11 @@
 	"version": "0.0.1",
 	"id": "piepieonline.VRReworked",
 	"name": "VR Reworked",
-	"contentFolders": ["content/default", "content/interactables"],
+	"contentFolders": [
+		"content/default",
+		"content/virtualkeys",
+		"content/interactables"
+	],
 	"description": "Modifies how the game works in VR to be more natural, and less button based.",
 	"authors": ["piepieonline"],
 	"frameworkVersion": "2.4.0",
@@ -14,5 +18,14 @@
 			"ui_prop_key_vr_master_swipecard_desc" : "Virtual Keycard, used to operate any keycard readers you have the keycard for"
 		}
 	},
-	"thumbs": ["ConsoleCmd OnlineResources_Disable 1"]
+	"thumbs": ["ConsoleCmd OnlineResources_Disable 1"],
+	"options": [
+		{
+			"name": "Smaller head collider",
+			"tooltip": "Shrinks the size of 47's head collider, making ",
+			"type": "checkbox",
+			"enabledByDefault": true,
+			"contentFolders": ["content/tinyheadcollider"]
+		}
+	]
 }
