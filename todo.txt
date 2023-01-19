@@ -40,7 +40,6 @@ VR Camera: 006143A5FFC8BF5D
 in progress:
 - VR Enable conditions for:
 -- VRHelper_Hand_Activator_Sphere
--- VR_Hip_Holster_Pistol (done?)
 
 - VRHelper_Hand_Activator
 -- Remove button marker, add the same marker as sphere

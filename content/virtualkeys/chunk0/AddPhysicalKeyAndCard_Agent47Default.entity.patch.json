@@ -1,0 +1,18 @@
+{
+    "tempHash": "00D347CBA29EE6BA",
+    "tbluHash": "000A263E54999100",
+    "patch": [
+        {
+            "AddEntity": [
+                "feed80e82dcc18af",
+                {
+                    "parent": "158cb860b1fce56d",
+                    "name": "_VR Extra Items",
+                    "factory": "003EE1623395E8B8",
+                    "blueprint": "0052FD29B7AE25CC"
+                }
+            ]
+        }
+    ],
+    "patchVersion": 6
+}

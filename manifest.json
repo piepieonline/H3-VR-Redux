@@ -11,7 +11,7 @@
 	"authors": [
 		"piepieonline"
 	],
-	"frameworkVersion": "2.4.0",
+	"frameworkVersion": "2.10.1",
 	"localisation": {
 		"english": {
 			"ui_prop_key_vr_master_key_name": "Virtual Key",
@@ -49,18 +49,20 @@
 			]
 		},
 		{
-			"name": "Disable interaction zone visual aid",
+			"name": "BROKEN PENDING SMF UPDATE: Disable interaction zone visual aid",
 			"tooltip": "Disables the highlight zones when a VR interaction is available (Might make it harder to find the sweet spot)",
-			"type": "checkbox",
+			"type": "conditional",
+			"condition": "\"piepieonline.VRReduxDebug\" in config.loadOrder",
 			"enabledByDefault": false,
 			"contentFolders": [
 				"content/interactables_option_nozone"
 			]
 		},
 		{
-			"name": "Disable key and keycard autoequip",
+			"name": "BROKEN PENDING SMF UPDATE: Disable key and keycard autoequip",
 			"tooltip": "Disables the automatic equipping of the Virtual Key and Keycard when approaching locked doors",
-			"type": "checkbox",
+			"type": "conditional",
+			"condition": "\"piepieonline.VRReduxDebug\" in config.loadOrder",
 			"enabledByDefault": false,
 			"contentFolders": [
 				"content/interactables_option_noautoequip"
