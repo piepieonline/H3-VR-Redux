@@ -20,10 +20,16 @@
 			"ui_prop_key_vr_master_swipecard_desc": "Virtual Keycard, used to operate any keycard readers you have the keycard for"
 		}
 	},
-	"thumbs": [
-		"ConsoleCmd OnlineResources_Disable 1"
-	],
 	"options": [
+		{
+			"name": "Enable virtual key and keycard (Highly recommended, but disables online resources)",
+			"tooltip": "Disables online resources, which is required to enable the virtual key and keycard",
+			"type": "checkbox",
+			"enabledByDefault": true,
+			"thumbs": [
+				"ConsoleCmd OnlineResources_Disable 1"
+			]
+		},
 		{
 			"name": "Smaller head collider",
 			"tooltip": "Shrinks the size of 47's head collider, making agility areas easier to use",
@@ -31,6 +37,15 @@
 			"enabledByDefault": true,
 			"contentFolders": [
 				"content/tinyheadcollider"
+			]
+		},
+		{
+			"name": "Hip Holster (Pistols)",
+			"tooltip": "Adds a hip holster that can hold a single pistol, rather than it sharing a common inventory on your chest",
+			"type": "checkbox",
+			"enabledByDefault": false,
+			"contentFolders": [
+				"content/hipholsterpistol"
 			]
 		},
 		{
@@ -50,7 +65,15 @@
 			"contentFolders": [
 				"content/interactables_option_noautoequip"
 			]
+		},
+		{
+			"name": "Use debug content",
+			"type": "conditional",
+			"condition": "\"piepieonline.VRReduxDebug\" in config.loadOrder",
+			"contentFolders": [
+				"content/test_testing"
+			]
 		}
 	],
-	"updateCheck": "https://raw.githubusercontent.com/piepieonline/h3-vr-redux/main/version.json"
+	"updateCheck": "https://raw.githubusercontent.com/piepieonline/h3-vr-redux/master/version.json"
 }

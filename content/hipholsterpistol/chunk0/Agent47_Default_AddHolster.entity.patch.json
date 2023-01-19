@@ -1,0 +1,18 @@
+{
+    "tempHash": "00D347CBA29EE6BA",
+    "tbluHash": "000A263E54999100",
+    "patch": [
+        {
+            "AddEntity": [
+                "feed501f9d975a9c",
+                {
+                    "parent": "158cb860b1fce56d",
+                    "name": "VR_Hip_Holster_Pistol",
+                    "factory": "00F7FB236D625C28",
+                    "blueprint": "00CE7C20BBA24309"
+                }
+            ]
+        }
+    ],
+    "patchVersion": 6
+}
