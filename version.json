@@ -1,5 +1,5 @@
 {
-    "version": "0.0.1",
-    "changelog": "Initial Version",
-    "url": "https://github.com/piepieonline/h3-vr-redux/releases/download/v0.0.1/VRRedux.zip"
+    "version": "0.0.2",
+    "changelog": "Added poisoning. Added highlight markers to the hand interactions IO already placed. Added lockers and security boxes",
+    "url": "https://github.com/piepieonline/h3-vr-redux/releases/download/v0.0.2/VRRedux.zip"
 }
