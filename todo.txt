@@ -5,6 +5,7 @@ inventory on left hand
 both hands grab
 disable prompt
 turn off resolution scaling
+enable optional regular controller gameplay
 
 https://www.reddit.com/r/HiTMAN/comments/s9az9q/vr_improvement/
 https://www.reddit.com/r/HiTMAN/comments/10fg37e/are_there_any_mods_that_improve_vr_yet_on_pc/
@@ -14,11 +15,6 @@ paris sink 007C4BC658C10D74
 
 Prop searching
 findstr /i /m "UseLeftHandItem" *.entity.JSON
-findstr /i /m "eHolsterAbility" *.entity.JSON
-findstr /i /m "m_rKeywordsToFind" *.entity.JSON
-findstr /i /m "UseInventory" *.entity.JSON
-findstr /i /m "f3f8ac31-195d-4701-9e7c-775d621a405a" *.entity.JSON
-findstr /i /m "Place" *.entity.JSON
 
 
 zvrenabledcondition - also false during the initial cutscenes :S
@@ -38,11 +34,9 @@ VR Camera: 006143A5FFC8BF5D
 47 DEFAULT: 00D347CBA29EE6BA
 
 in progress:
-- VR Enable conditions for:
--- VRHelper_Hand_Activator_Sphere
+- VR Enable conditions for VRHelper_Interaction_Sphere_Visual (when options work)
 
-- VRHelper_Hand_Activator
--- Remove button marker, add the same marker as sphere
+- adjust hand position/rotation
 
 - doors
 -- rusty crowbar/nail
@@ -56,6 +50,11 @@ in progress:
 -- remove collider from spawner somehow?
 -- button if possible...
 
+- More VR interactions to add
+-- Radio (vrhelper_hand_activator, as per 'setpiece_distraction_power_fusebox_scifi'?)
+-- shotandimpulselistener as a fallback option?
+
+- convert entities to patches
 
 done:
 - fire alarm
