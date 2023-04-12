@@ -1,9 +1,8 @@
 {
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"id": "piepieonline.VRRedux",
 	"name": "VR Redux",
 	"contentFolders": [
-		"content/default",
 		"content/virtualkeys",
 		"content/interactables"
 	],
