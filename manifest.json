@@ -4,7 +4,8 @@
 	"name": "VR Redux",
 	"contentFolders": [
 		"content/virtualkeys",
-		"content/interactables"
+		"content/interactables",
+		"content/freelancer"
 	],
 	"description": "A collection of VR related tweaks, trying to make the game more `VR native`.",
 	"authors": [

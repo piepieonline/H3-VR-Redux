@@ -1,0 +1,81 @@
+{
+    "tempHash": "0073B0E03EBBF700",
+    "tbluHash": "00B548263EF06636",
+    "patch": [
+        {
+            "SubEntityOperation": [
+                "6218ecd47475c317",
+                {
+                    "AddProperty": [
+                        "m_bShowOnTop",
+                        {
+                            "type": "bool",
+                            "value": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "SubEntityOperation": [
+                "e68f5cd81ff8b422",
+                {
+                    "RemovePropertyByName": "m_rValueEntity"
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feede607aa2f4fde",
+                {
+                    "parent": "3ebbd91feb8e0bf6",
+                    "name": "VR_Hud",
+                    "factory": "[modules:/zentity.class].pc_entitytype",
+                    "blueprint": "[modules:/zentity.class].pc_entityblueprint"
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feed74e6dee9adfb",
+                {
+                    "parent": "feede607aa2f4fde",
+                    "name": "VR_Instinct_ValueBool_Set",
+                    "factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_set.entitytemplate].pc_entitytype",
+                    "blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_set.entitytemplate].pc_entityblueprint",
+                    "properties": {
+                        "m_rValueEntity": {
+                            "type": "SEntityTemplateReference",
+                            "value": "c4b595e58ec96923",
+                            "postInit": true
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "AddEntity": [
+                "feeda6bc805d4098",
+                {
+                    "parent": "feede607aa2f4fde",
+                    "name": "InstinctVRHUDCondition",
+                    "factory": "[modules:/zinstinctvrhudcondition.class].pc_entitytype",
+                    "blueprint": "[modules:/zinstinctvrhudcondition.class].pc_entityblueprint",
+                    "events": {
+                        "OnTrue": {
+                            "SetTrue": [
+                                "feed74e6dee9adfb"
+                            ]
+                        },
+                        "OnFalse": {
+                            "SetFalse": [
+                                "feed74e6dee9adfb"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "patchVersion": 6
+}
