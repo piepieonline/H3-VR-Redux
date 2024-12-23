@@ -1,0 +1,154 @@
+{
+	"tempHash": "005653C610EB42B6",
+	"tbluHash": "008C8B996DDDFDF8",
+	"patch": [
+		{
+			"AddEntity": [
+				"feedbab36639277b",
+				{
+					"parent": "0e4351b1fb6d5a7a",
+					"name": "VR",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed10d3b10f4631",
+				{
+					"parent": "feedbab36639277b",
+					"name": "UselessVBP",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+					"properties": {}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed80568d78c073",
+				{
+					"parent": "feedbab36639277b",
+					"name": "Hacker - VRHelper_Physical_Motion_Activator",
+					"factory": "0051D3BFDE86698B",
+					"blueprint": "00B921CDE202F9E8",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": { "x": 0, "y": 0, "z": 0 },
+								"position": { "x": 0, "y": 0, "z": 1.15 }
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "0e4351b1fb6d5a7a",
+							"postInit": true
+						},
+						"Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["0c39c12407195209"]
+						},
+						"RequiredItemsInInventory": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedf45d7ece6f93"]
+						},
+						"RequiredItemsInHand": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedc8d22d88d6a3"]
+						},
+						"NeedsPriming": { "type": "bool", "value": false },
+						"HeldItemIsConsumed": {
+							"type": "bool",
+							"value": true
+						}
+					},
+					"events": {
+						"CrowbarCompleted": {
+							"SetTrue": ["c7c44ba51a118d0a"],
+							"ShowHackerCard": ["dd00b8096b704cd5"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedc8d22d88d6a3",
+				{
+					"parent": "feed80568d78c073",
+					"name": "HackerInHand HeroKeywordCondition",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "36f00a2501dcf6d8",
+							"postInit": true
+						},
+						"m_bCheckLeftHand": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckRightHand": {
+							"type": "bool",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedf45d7ece6f93",
+				{
+					"parent": "feed80568d78c073",
+					"name": "HackerInInventory HeroKeywordCondition",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "36f00a2501dcf6d8",
+							"postInit": true
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

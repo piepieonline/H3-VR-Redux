@@ -1,0 +1,485 @@
+{
+	"tempHash": "00376B0AC9245C86",
+	"tbluHash": "00B1F78AD5118A59",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"ShotVolumeIntersection",
+						{
+							"originalProperty": "PositionParents",
+							"originalEntity": "feeda87f7bafdb11"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"ShotVolumeIntersection",
+						{
+							"originalProperty": "PositionParents",
+							"originalEntity": "feed87f322065fb4"
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"96aaa4b84aac2399",
+				{
+					"AddPropertyAliasConnection": [
+						"ShotVolumeIntersection",
+						{
+							"originalProperty": "PositionParents",
+							"originalEntity": "feeda9571fba276e"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedf0c9472ed169",
+				{
+					"parent": "feed450c5a0a5272",
+					"name": "CanVRUnlock VBO",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": [
+								"0b018819467ff1bb",
+								"a034a938ab5b3598",
+								"786ac673999b8da8",
+								"3bc42bb3d654e41c"
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed450c5a0a5272",
+				{
+					"parent": "96aaa4b84aac2399",
+					"name": "VR",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feeda9571fba276e",
+				{
+					"parent": "feed450c5a0a5272",
+					"name": "Lockpick - VRHelper_Physical_Motion_Activator",
+					"factory": "0051D3BFDE86698B",
+					"blueprint": "00B921CDE202F9E8",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": { "x": 0, "y": 0, "z": 90 },
+								"position": { "x": -0.45, "y": 0, "z": 1 }
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "96aaa4b84aac2399",
+							"postInit": true
+						},
+						"Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedf0c9472ed169"]
+						},
+						"RequiredItemsInInventory": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["dd5b1ce055041cd9"]
+						},
+						"RequiredItemsInHand": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feed0dd66808ec48"]
+						},
+						"NeedsPriming": { "type": "bool", "value": false },
+						"IsIllegal": { "type": "bool", "value": true }
+					},
+					"events": {
+						"CrowbarCompleted": {
+							"Poll": ["feede89ffbee92c4"]
+						}
+					},
+					"outputCopying": {
+						"CrowbarCompleted": {
+							"LockpickCompleted": ["96aaa4b84aac2399"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feede89ffbee92c4",
+				{
+					"parent": "feed450c5a0a5272",
+					"name": "UselessVBP",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "feedf0c9472ed169"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feeda87f7bafdb11",
+				{
+					"parent": "feed450c5a0a5272",
+					"name": "Crowbar - VRHelper_Physical_Motion_Activator",
+					"factory": "0051D3BFDE86698B",
+					"blueprint": "00B921CDE202F9E8",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": { "x": 0, "y": 0, "z": 90 },
+								"position": { "x": -0.45, "y": 0, "z": 1 }
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "96aaa4b84aac2399",
+							"postInit": true
+						},
+						"Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedf0c9472ed169"]
+						},
+						"RequiredItemsInInventory": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["23c293135eababdc"]
+						},
+						"RequiredItemsInHand": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feed35c29f7f7819"]
+						},
+						"NeedsPriming": { "type": "bool", "value": true },
+						"Radius": { "type": "float32", "value": 0.375 },
+						"RadiusVector": {
+							"type": "SVector3",
+							"value": { "x": 0.75, "y": 0.75, "z": 0.75 }
+						},
+						"IsIllegal": { "type": "bool", "value": true },
+						"IsIllegalSevere": {
+							"type": "bool",
+							"value": true
+						},
+						"IsIllegalLargeScale": {
+							"type": "bool",
+							"value": true
+						}
+					},
+					"events": {
+						"CrowbarCompleted": {
+							"Poll": ["feede89ffbee92c4"]
+						}
+					},
+					"outputCopying": {
+						"CrowbarCompleted": {
+							"CrowbarCompleted": ["96aaa4b84aac2399"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed87f322065fb4",
+				{
+					"parent": "feed450c5a0a5272",
+					"name": "Key - VRHelper_Physical_Motion_Activator",
+					"factory": "0051D3BFDE86698B",
+					"blueprint": "00B921CDE202F9E8",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": { "x": 0, "y": 0, "z": 90 },
+								"position": { "x": -0.45, "y": 0, "z": 1 }
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "96aaa4b84aac2399",
+							"postInit": true
+						},
+						"Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feedf0c9472ed169"]
+						},
+						"RequiredItemsInInventory": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feed7ee0128bffe6"]
+						},
+						"RequiredItemsInHand": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feed93fbd14d584f"]
+						},
+						"NeedsPriming": { "type": "bool", "value": false },
+						"AutoEquipItemBool": {
+							"type": "bool",
+							"value": true
+						},
+						"AutoEquipItemKeywords": {
+							"type": "SEntityTemplateReference",
+							"value": "feed39a0ec9c417d"
+						}
+					},
+					"events": {
+						"CrowbarCompleted": {
+							"Poll": ["feede89ffbee92c4"]
+						}
+					},
+					"outputCopying": {
+						"CrowbarCompleted": {
+							"KeyCompleted": ["96aaa4b84aac2399"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed93fbd14d584f",
+				{
+					"parent": "feed87f322065fb4",
+					"name": "HasRightKey and VirtualKeyInHand",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": [
+								"feed46b4251d0ee7",
+								{
+									"ref": "5f9800a926dae6b6",
+									"externalScene": null,
+									"exposedEntity": "KeyRequiredAndHitmanHasKey"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed39a0ec9c417d",
+				{
+					"parent": "feed87f322065fb4",
+					"name": "Keyword_ITEM_MOD_VIRTUAL_KEY",
+					"factory": "00691C26BD4034F5",
+					"blueprint": "00B99AE20611D126"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed35c29f7f7819",
+				{
+					"parent": "feeda87f7bafdb11",
+					"name": "CrowbarInHand HeroKeywordCondition",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "38796cdf1581b3e3",
+							"postInit": true
+						},
+						"m_bCheckLeftHand": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckRightHand": {
+							"type": "bool",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed0dd66808ec48",
+				{
+					"parent": "feeda9571fba276e",
+					"name": "LockpickInHand HeroKeywordCondition",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "3ac994b9371d5265",
+							"postInit": true
+						},
+						"m_bCheckLeftHand": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckRightHand": {
+							"type": "bool",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed46b4251d0ee7",
+				{
+					"parent": "feed87f322065fb4",
+					"name": "VirtualKeyInHand HeroKeywordCondition",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": false
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "feed39a0ec9c417d",
+							"postInit": true
+						},
+						"m_bCheckLeftHand": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckRightHand": {
+							"type": "bool",
+							"value": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedfa12c1e939db",
+				{
+					"parent": "feed87f322065fb4",
+					"name": "VirtualKeyInInventory HeroKeywordCondition",
+					"factory": "[modules:/zherokeywordcondition.class].pc_entitytype",
+					"blueprint": "[modules:/zherokeywordcondition.class].pc_entityblueprint",
+					"properties": {
+						"m_bUseInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bIncludeItemHiddenInInventory": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bCheckInsideContainers": {
+							"type": "bool",
+							"value": true
+						},
+						"m_bShouldSubscribeGeneralEvents": {
+							"type": "bool",
+							"value": false
+						},
+						"m_rRequirements": {
+							"type": "SEntityTemplateReference",
+							"value": "feed39a0ec9c417d",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed7ee0128bffe6",
+				{
+					"parent": "feed87f322065fb4",
+					"name": "HasRightKey and VirtualKeyInInventory",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aValues": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": [
+								"feedfa12c1e939db",
+								{
+									"ref": "5f9800a926dae6b6",
+									"externalScene": null,
+									"exposedEntity": "KeyRequiredAndHitmanHasKey"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
