@@ -53,7 +53,7 @@
 			"type": "checkbox",
 			"enabledByDefault": false,
 			"contentFolders": [
-				"content/interactables_option_nozone"
+				"content/interactablesoptionnozone"
 			]
 		},
 		{
@@ -62,7 +62,7 @@
 			"type": "checkbox",
 			"enabledByDefault": false,
 			"contentFolders": [
-				"content/interactables_option_noautoequip"
+				"content/interactablesoptionnoautoequip"
 			]
 		}
 	],
