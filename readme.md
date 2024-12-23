@@ -19,6 +19,9 @@ A collection of VR related tweaks, trying to make the game more `VR native`.
   * The pistol that appears on your hip has to be hardcoded, so it won't be a model match for the pistol you actually bring
   * I've chosen to have the holster not actually attached to 47, as the positioning in VR is funky, it seems to work much better slightly off the body
 
+## Freelancer Fixes
+* For showdowns, it fixes the camera and the instinct markers for VR
+
 ## Recommended options:
 * VR Collision fade to black: Off
 * VR Head based movement: Off
@@ -26,3 +29,7 @@ A collection of VR related tweaks, trying to make the game more `VR native`.
 ## Other generic VR thoughts:
 * I recommend not trying to play roomscale, the game really isn't designed for it at all - it's much smoother if you grab a chair and use pure virtual locomotion :(
 * Throwing turns out to be ok, once you've got the hang of it. What I find works is: lock on with left trigger, and do a tiny sideways flick with you only your right hand - don't use your arm at all.
+
+## Known issues:
+* Cameras, scopes and cutscenes can blow out colour-wise sometimes. Not sure if this is me or IO
+* Not all mission intro cutscenes load properly, and you end up with a black screen instead. The mission should still work if you wait or skip, however (Snow Festival is like this)
