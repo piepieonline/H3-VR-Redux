@@ -20,7 +20,7 @@ A collection of VR related tweaks, trying to make the game more `VR native`.
   * I've chosen to have the holster not actually attached to 47, as the positioning in VR is funky, it seems to work much better slightly off the body
 
 ## Freelancer Fixes
-* For showdowns, it fixes the camera and the instinct markers for VR
+* Fixes the suspect camera and instinct mode in showdowns (Requires use of MissionCompanion to play Freelancer VR)
 
 ## Recommended options:
 * VR Collision fade to black: Off
@@ -33,3 +33,6 @@ A collection of VR related tweaks, trying to make the game more `VR native`.
 ## Known issues:
 * Cameras, scopes and cutscenes can blow out colour-wise sometimes. Not sure if this is me or IO
 * Not all mission intro cutscenes load properly, and you end up with a black screen instead. The mission should still work if you wait or skip, however (Snow Festival is like this)
+
+## Development notes:
+* Releasing new versions is done by tagging and pushing, the release should then be created automatically. Ensure the commit that updates version.json is the tagged commit.

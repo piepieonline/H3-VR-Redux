@@ -1,0 +1,79 @@
+{
+	"tempHash": "005D93B1289F0E60",
+	"tbluHash": "007BA8306C87013C",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"3af8eb32ca598ae4",
+				{
+					"SetPropertyValue": {
+						"property_name": "m_mTransform",
+						"value": {
+							"rotation": {
+								"x": -0.0,
+								"y": 0.0,
+								"z": -180.0
+							},
+							"position": {
+								"x": 0.5234990119934082,
+								"y": -0.13395600020885468,
+								"z": 0.00019500000053085387
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"3af8eb32ca598ae4",
+				{
+					"AddProperty": [
+						"pie_vrInteractionLocation_mTransform",
+						{
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": -0.225,
+									"y": -0.81,
+									"z": 1.121
+								}
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"3eafaede30c01c9c",
+				{
+					"AddProperty": [
+						"pie_vrInteractionLocation_mTransform",
+						{
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": -0.225,
+									"y": -1.11,
+									"z": 1.121
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

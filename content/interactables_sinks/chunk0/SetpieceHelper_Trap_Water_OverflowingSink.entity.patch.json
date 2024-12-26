@@ -1,0 +1,75 @@
+{
+	"tempHash": "008E91D2D82F1E6F",
+	"tbluHash": "0006E2884399F9B3",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"5a8a3a4a23cb7aef",
+				{
+					"AddPropertyAliasConnection": [
+						"pie_vrInteractionLocation_mTransform",
+						{
+							"originalProperty": "m_mTransform",
+							"originalEntity": "feed4cbdf5fb3a89"
+						}
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed4cbdf5fb3a89",
+				{
+					"parent": "5a8a3a4a23cb7aef",
+					"name": "VRHelper_Hand_Activator",
+					"factory": "[assembly:/_pro/design/gamecore/vrhelpers.template?/vrhelper_hand_activator.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/vrhelpers.template?/vrhelper_hand_activator.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_vGlobalSize": {
+							"type": "SVector3",
+							"value": { "x": 0.14, "y": 0.14, "z": 0.14 }
+						},
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								},
+								"position": {
+									"x": -0.2,
+									"y": -0.770,
+									"z": 1.05
+								}
+							}
+						},
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "a3276045ad797223",
+							"postInit": true
+						},
+						"m_bIsIllegal": { "type": "bool", "value": false },
+						"m_bIsSevere": { "type": "bool", "value": false },
+						"Usable": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["b930e6a19de405e0"]
+						},
+						"m_rContextObjectSpatial": {
+							"type": "SEntityTemplateReference",
+							"value": {
+								"ref": "a3276045ad797223",
+								"externalScene": null,
+								"exposedEntity": "InteractionPointSpatial"
+							}
+						}
+					},
+					"events": {
+						"OnPressed": { "SetTrue": ["b4649522118597aa"] }
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

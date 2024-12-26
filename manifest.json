@@ -1,13 +1,14 @@
 {
-	"version": "0.0.3",
+	"version": "0.1.1",
 	"id": "piepieonline.VRRedux",
 	"name": "VR Redux",
 	"contentFolders": [
 		"content/virtualkeys",
 		"content/interactables",
+		"content/interactables_sinks",
 		"content/freelancer"
 	],
-	"description": "A collection of VR related tweaks, trying to make the game more `VR native`.",
+	"description": "A collection of VR related tweaks, trying to make the game more 'VR native'.",
 	"authors": [
 		"piepieonline"
 	],
@@ -54,7 +55,7 @@
 			"type": "checkbox",
 			"enabledByDefault": false,
 			"contentFolders": [
-				"content/interactablesoptionnozone"
+				"content/x_overrideoption_interactables_nozone"
 			]
 		},
 		{
@@ -63,7 +64,16 @@
 			"type": "checkbox",
 			"enabledByDefault": false,
 			"contentFolders": [
-				"content/interactablesoptionnoautoequip"
+				"content/x_overrideoption_interactables_noautoequip"
+			]
+		},
+		{
+			"name": "Enable dev content",
+			"tooltip": "Enables dev content, such as showing interactable areas even in flat mode",
+			"type": "checkbox",
+			"enabledByDefault": false,
+			"contentFolders": [
+				"content/x_overrideoption_devcontent"
 			]
 		}
 	],

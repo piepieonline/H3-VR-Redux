@@ -1,1 +1,269 @@
-{"tempHash":"003EE1623395E8B8","tbluHash":"0052FD29B7AE25CC","rootEntity":"feedcac9c38a441e","entities":{"feedcac9c38a441e":{"parent":null,"name":"_VR Extra Items","factory":"[modules:/zentity.class].pc_entitytype","blueprint":"[modules:/zentity.class].pc_entityblueprint"},"feedb65155279904":{"parent":"feedcac9c38a441e","name":"Master Key","factory":"[modules:/zentity.class].pc_entitytype","blueprint":"[modules:/zentity.class].pc_entityblueprint"},"feed548b17355e60":{"parent":"feedcac9c38a441e","name":"GameEventListener","factory":"[modules:/zgameeventlistenerentity.class].pc_entitytype","blueprint":"[modules:/zgameeventlistenerentity.class].pc_entityblueprint","events":{"EventOccurred":{"Signal":["feedef2da1098fc8"]}}},"feedef2da1098fc8":{"parent":"feedcac9c38a441e","name":"SignalOnce","factory":"[modules:/zvoidsignalonceentity.class].pc_entitytype","blueprint":"[modules:/zvoidsignalonceentity.class].pc_entityblueprint","properties":{"m_fExpireInterval":{"type":"float32","value":5},"m_bSignaling":{"type":"bool","value":true}},"events":{"Out":{"SpawnItem":["feedb5912c57e3f4","feed09f57e8b6f19"]}}},"feed0770d5d655f8":{"parent":"feedcac9c38a441e","name":"Master Swipecard","factory":"[modules:/zentity.class].pc_entitytype","blueprint":"[modules:/zentity.class].pc_entityblueprint"},"feedb5912c57e3f4":{"parent":"feedb65155279904","name":"ItemSpawner MasterKey","factory":"[modules:/zitemspawner.class].pc_entitytype","blueprint":"[modules:/zitemspawner.class].pc_entityblueprint","properties":{"m_mTransform":{"type":"SMatrix43","value":{"rotation":{"x":0,"y":0,"z":-46.44890181830316},"position":{"x":18.93832015991211,"y":13.000089645385742,"z":17.271379470825195}}},"m_bUsePlacementAttach":{"type":"bool","value":false},"m_rMainItemKey":{"type":"SEntityTemplateReference","value":"feed8a01cfd9bc08"},"m_bSpawnOnStart":{"type":"bool","value":false},"m_eRoomBehaviour":{"type":"ZSpatialEntity.ERoomBehaviour","value":"ROOM_STATIC"},"m_bVisible":{"type":"bool","value":true},"m_bIsPrivate":{"type":"bool","value":false},"m_bVisibleInBoxReflection":{"type":"bool","value":true}},"events":{"Item":{"SetItem":["feedd6a3757e682e"]},"ItemReady":{"PickupIntoPocket":["feedd6a3757e682e"]}}},"feed8a01cfd9bc08":{"parent":"feedb65155279904","name":"ItemKey MasterKey","factory":"[modules:/zitemrepositorykeyentity.class].pc_entitytype","blueprint":"[modules:/zitemrepositorykeyentity.class].pc_entityblueprint","properties":{"m_RepositoryId":{"type":"ZGuid","value":"de3553c0-6fcb-4f3d-a5e0-1c35a456029e"}}},"feedd6a3757e682e":{"parent":"feedb65155279904","name":"HeroItemAction MasterKey","factory":"[modules:/zheroitemaction.class].pc_entitytype","blueprint":"[modules:/zheroitemaction.class].pc_entityblueprint","properties":{"m_rKeywordsToFind":{"type":"SEntityTemplateReference","value":"feed8a01cfd9bc08"}}},"feed09f57e8b6f19":{"parent":"feed0770d5d655f8","name":"ItemSpawner MasterSwipecard","factory":"[modules:/zitemspawner.class].pc_entitytype","blueprint":"[modules:/zitemspawner.class].pc_entityblueprint","properties":{"m_mTransform":{"type":"SMatrix43","value":{"rotation":{"x":0,"y":0,"z":-46.44890181830316},"position":{"x":18.93832015991211,"y":13.000089645385742,"z":17.271379470825195}}},"m_bUsePlacementAttach":{"type":"bool","value":false},"m_rMainItemKey":{"type":"SEntityTemplateReference","value":"feedb98efddb8a90"},"m_bSpawnOnStart":{"type":"bool","value":false},"m_eRoomBehaviour":{"type":"ZSpatialEntity.ERoomBehaviour","value":"ROOM_STATIC"},"m_bVisible":{"type":"bool","value":true},"m_bIsPrivate":{"type":"bool","value":false},"m_bVisibleInBoxReflection":{"type":"bool","value":true}},"events":{"Item":{"SetItem":["feed7fcde06f119f"]},"ItemReady":{"PickupIntoPocket":["feed7fcde06f119f"]}}},"feedb98efddb8a90":{"parent":"feed0770d5d655f8","name":"ItemKey MasterSwipecard","factory":"[modules:/zitemrepositorykeyentity.class].pc_entitytype","blueprint":"[modules:/zitemrepositorykeyentity.class].pc_entityblueprint","properties":{"m_RepositoryId":{"type":"ZGuid","value":"91086d91-f3ac-400b-a2ff-fd36d68de8e4"}}},"feed7fcde06f119f":{"parent":"feed0770d5d655f8","name":"HeroItemAction MasterSwipecard","factory":"[modules:/zheroitemaction.class].pc_entitytype","blueprint":"[modules:/zheroitemaction.class].pc_entityblueprint","properties":{"m_rKeywordsToFind":{"type":"SEntityTemplateReference","value":"feedb98efddb8a90"}}}},"propertyOverrides":[],"overrideDeletes":[],"pinConnectionOverrides":[],"pinConnectionOverrideDeletes":[],"externalScenes":[],"subType":"template","quickEntityVersion":3.1,"extraFactoryDependencies":[],"extraBlueprintDependencies":[],"comments":[]}
+{
+	"tempHash": "003EE1623395E8B8",
+	"tbluHash": "0052FD29B7AE25CC",
+	"rootEntity": "feedcac9c38a441e",
+	"entities": {
+		"feedcac9c38a441e": {
+			"parent": null,
+			"name": "_VR Extra Items",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"feedb65155279904": {
+			"parent": "feedcac9c38a441e",
+			"name": "Master Key",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"feed548b17355e60": {
+			"parent": "feedcac9c38a441e",
+			"name": "GameEventListener",
+			"factory": "[modules:/zgameeventlistenerentity.class].pc_entitytype",
+			"blueprint": "[modules:/zgameeventlistenerentity.class].pc_entityblueprint",
+			"events": {
+				"EventOccurred": { "Signal": ["feedef2da1098fc8"] }
+			}
+		},
+		"feedef2da1098fc8": {
+			"parent": "feedcac9c38a441e",
+			"name": "SignalOnce",
+			"factory": "[modules:/zvoidsignalonceentity.class].pc_entitytype",
+			"blueprint": "[modules:/zvoidsignalonceentity.class].pc_entityblueprint",
+			"properties": {
+				"m_fExpireInterval": { "type": "float32", "value": 5 },
+				"m_bSignaling": { "type": "bool", "value": true }
+			},
+			"events": {
+				"Out": { "Poll": ["cafec5202382d655", "cafe51a032ce0b42"] }
+			}
+		},
+		"feed0770d5d655f8": {
+			"parent": "feedcac9c38a441e",
+			"name": "Master Swipecard",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"feedb5912c57e3f4": {
+			"parent": "feedb65155279904",
+			"name": "ItemSpawner MasterKey",
+			"factory": "[modules:/zitemspawner.class].pc_entitytype",
+			"blueprint": "[modules:/zitemspawner.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": 0,
+							"y": 0,
+							"z": -46.44890181830316
+						},
+						"position": {
+							"x": 18.93832015991211,
+							"y": 13.000089645385742,
+							"z": 17.271379470825195
+						}
+					}
+				},
+				"m_bUsePlacementAttach": {
+					"type": "bool",
+					"value": false
+				},
+				"m_rMainItemKey": {
+					"type": "SEntityTemplateReference",
+					"value": "feed8a01cfd9bc08"
+				},
+				"m_bSpawnOnStart": { "type": "bool", "value": false },
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_STATIC"
+				},
+				"m_bVisible": { "type": "bool", "value": true },
+				"m_bIsPrivate": { "type": "bool", "value": false },
+				"m_bVisibleInBoxReflection": {
+					"type": "bool",
+					"value": true
+				}
+			},
+			"events": {
+				"Item": { "SetItem": ["feedd6a3757e682e"] },
+				"ItemReady": { "PickupIntoPocket": ["feedd6a3757e682e"] }
+			}
+		},
+		"feed8a01cfd9bc08": {
+			"parent": "feedb65155279904",
+			"name": "ItemKey MasterKey",
+			"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+			"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+			"properties": {
+				"m_RepositoryId": {
+					"type": "ZGuid",
+					"value": "de3553c0-6fcb-4f3d-a5e0-1c35a456029e"
+				}
+			}
+		},
+		"feedd6a3757e682e": {
+			"parent": "feedb65155279904",
+			"name": "HeroItemAction MasterKey",
+			"factory": "[modules:/zheroitemaction.class].pc_entitytype",
+			"blueprint": "[modules:/zheroitemaction.class].pc_entityblueprint",
+			"properties": {
+				"m_rKeywordsToFind": {
+					"type": "SEntityTemplateReference",
+					"value": "feed8a01cfd9bc08"
+				}
+			}
+		},
+		"feed09f57e8b6f19": {
+			"parent": "feed0770d5d655f8",
+			"name": "ItemSpawner MasterSwipecard",
+			"factory": "[modules:/zitemspawner.class].pc_entitytype",
+			"blueprint": "[modules:/zitemspawner.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": {
+							"x": 0,
+							"y": 0,
+							"z": -46.44890181830316
+						},
+						"position": {
+							"x": 18.93832015991211,
+							"y": 13.000089645385742,
+							"z": 17.271379470825195
+						}
+					}
+				},
+				"m_bUsePlacementAttach": {
+					"type": "bool",
+					"value": false
+				},
+				"m_rMainItemKey": {
+					"type": "SEntityTemplateReference",
+					"value": "feedb98efddb8a90"
+				},
+				"m_bSpawnOnStart": { "type": "bool", "value": false },
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_STATIC"
+				},
+				"m_bVisible": { "type": "bool", "value": true },
+				"m_bIsPrivate": { "type": "bool", "value": false },
+				"m_bVisibleInBoxReflection": {
+					"type": "bool",
+					"value": true
+				}
+			},
+			"events": {
+				"Item": { "SetItem": ["feed7fcde06f119f"] },
+				"ItemReady": { "PickupIntoPocket": ["feed7fcde06f119f"] }
+			}
+		},
+		"feedb98efddb8a90": {
+			"parent": "feed0770d5d655f8",
+			"name": "ItemKey MasterSwipecard",
+			"factory": "[modules:/zitemrepositorykeyentity.class].pc_entitytype",
+			"blueprint": "[modules:/zitemrepositorykeyentity.class].pc_entityblueprint",
+			"properties": {
+				"m_RepositoryId": {
+					"type": "ZGuid",
+					"value": "91086d91-f3ac-400b-a2ff-fd36d68de8e4"
+				}
+			}
+		},
+		"feed7fcde06f119f": {
+			"parent": "feed0770d5d655f8",
+			"name": "HeroItemAction MasterSwipecard",
+			"factory": "[modules:/zheroitemaction.class].pc_entitytype",
+			"blueprint": "[modules:/zheroitemaction.class].pc_entityblueprint",
+			"properties": {
+				"m_rKeywordsToFind": {
+					"type": "SEntityTemplateReference",
+					"value": "feedb98efddb8a90"
+				}
+			}
+		},
+		"cafe897f0a59e825": {
+			"parent": "feed0770d5d655f8",
+			"name": "HeroItemCondition HasSwipecard",
+			"factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+			"blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+			"properties": {
+				"m_ItemKeyToFind": {
+					"type": "SEntityTemplateReference",
+					"value": "feedb98efddb8a90"
+				},
+				"m_bCheckEquippedItem": { "type": "bool", "value": false },
+				"m_bCheckInventory": { "type": "bool", "value": true }
+			},
+			"events": { "OnTrue": { "SetTrue": ["cafea7d0d93bcbca"] } }
+		},
+		"cafe51a032ce0b42": {
+			"parent": "feed0770d5d655f8",
+			"name": "Avoid swipecard duplication",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rValueEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafea7d0d93bcbca"
+				}
+			},
+			"events": {
+				"PollFalse": { "SpawnItem": ["feed09f57e8b6f19"] }
+			}
+		},
+		"cafea7d0d93bcbca": {
+			"parent": "feed0770d5d655f8",
+			"name": "PlayerHasSwipecard",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+		},
+		"cafe9b5f8afadcc5": {
+			"parent": "feedb65155279904",
+			"name": "PlayerHasMasterKey",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_basic.entitytemplate].pc_entityblueprint"
+		},
+		"cafec5202382d655": {
+			"parent": "feedb65155279904",
+			"name": "Avoid masterkey duplication",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rValueEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe9b5f8afadcc5"
+				}
+			},
+			"events": {
+				"PollFalse": { "SpawnItem": ["feedb5912c57e3f4"] }
+			}
+		},
+		"cafeacffa52a928c": {
+			"parent": "feedb65155279904",
+			"name": "HeroItemCondition HasMasterkey",
+			"factory": "[modules:/zheroitemcondition.class].pc_entitytype",
+			"blueprint": "[modules:/zheroitemcondition.class].pc_entityblueprint",
+			"properties": {
+				"m_ItemKeyToFind": {
+					"type": "SEntityTemplateReference",
+					"value": "feed8a01cfd9bc08"
+				},
+				"m_bCheckEquippedItem": { "type": "bool", "value": false },
+				"m_bCheckInventory": { "type": "bool", "value": true }
+			},
+			"events": { "OnTrue": { "SetTrue": ["cafe9b5f8afadcc5"] } }
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}

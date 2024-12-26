@@ -1,0 +1,231 @@
+{
+	"tempHash": "00B684662A5D51D1",
+	"tbluHash": "000202CA3F8C0948",
+	"rootEntity": "feed892a18eec56e",
+	"entities": {
+		"feed892a18eec56e": {
+			"parent": null,
+			"name": "VRHelper_Interaction_Sphere_Visual",
+			"factory": "[modules:/zspatialentity.class].pc_entitytype",
+			"blueprint": "[modules:/zspatialentity.class].pc_entityblueprint",
+			"propertyAliases": {
+				"HelperEnabled": [
+					{
+						"originalProperty": "m_aValues",
+						"originalEntity": "feed4e7ec2c96baa"
+					}
+				],
+				"RadiusVector": [
+					{
+						"originalProperty": "m_PrimitiveScale",
+						"originalEntity": "feedb06608de366d"
+					}
+				]
+			},
+			"exposedEntities": {
+				"VolumeTriggerCharacter": {
+					"isArray": false,
+					"refersTo": ["feed41f0a43ea8cb"]
+				}
+			}
+		},
+		"feeda3ce9a8bf8c6": {
+			"parent": "feed892a18eec56e",
+			"name": "InteractionSphereVisual",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"feedb06608de366d": {
+			"parent": "feeda3ce9a8bf8c6",
+			"name": "InteractionSphereVolume_Visual",
+			"factory": "[assembly:/templates/aspectdummy.aspect]([assembly:/_pro/effects/geometry/misc/vr_holster.wl2?/vr_holster_sphere.prim].entitytype,[modules:/zvisibilitysaveaspect.class].entitytype).pc_entitytype",
+			"blueprint": "[assembly:/templates/aspectdummy.aspect]([assembly:/templates/geometrytemplatenocoll.template?/geomentity01.entitytemplate].entitytype,[modules:/zvisibilitysaveaspect.class].entitytype).pc_entityblueprint",
+			"properties": {
+				"m_eRoomBehaviour": {
+					"type": "ZSpatialEntity.ERoomBehaviour",
+					"value": "ROOM_DYNAMIC"
+				},
+				"m_bCastShadows": { "type": "bool", "value": false },
+				"m_bVisible": { "type": "bool", "value": true },
+				"m_PrimitiveScale": {
+					"type": "SVector3",
+					"value": { "x": 0.5, "y": 0.5, "z": 0.5 }
+				},
+				"m_eGlowType": {
+					"type": "ERenderGlowTypes",
+					"value": "ERENDERGLOWTYPE_EMISSIVE_UI"
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "feed892a18eec56e",
+					"postInit": true
+				}
+			}
+		},
+		"feeddf21ca52da9f": {
+			"parent": "feeda3ce9a8bf8c6",
+			"name": "fx_vr_holster",
+			"factory": "[assembly:/_pro/effects/materials/gameplay/fx_vr_holster.mi].pc_entitytype",
+			"blueprint": "[assembly:/_pro/effects/materials/gameplay/fx_vr_holster.mi].pc_entityblueprint",
+			"properties": {
+				"Override": { "type": "bool", "value": true },
+				"Global": { "type": "bool", "value": false },
+				"Alpha_op": {
+					"type": "IRenderMaterialEntity.EModifierOperation",
+					"value": "eReplace"
+				},
+				"ColorEdge_op": {
+					"type": "IRenderMaterialEntity.EModifierOperation",
+					"value": "eReplace"
+				},
+				"ColorCore_op": {
+					"type": "IRenderMaterialEntity.EModifierOperation",
+					"value": "eReplace"
+				},
+				"ColorEdge": { "type": "SColorRGB", "value": "#ffffff" },
+				"ColorCore": { "type": "SColorRGB", "value": "#ffffff" },
+				"Clients": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["feedb06608de366d"],
+					"postInit": true
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "feed892a18eec56e",
+					"postInit": true
+				}
+			}
+		},
+		"feed4e7ec2c96baa": {
+			"parent": "feed892a18eec56e",
+			"name": "EXT_ShowHelperVBO",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_eEvaluation": {
+					"type": "ZValueBool_Operation_Signal.EEvaluationType",
+					"value": "ALL"
+				}
+			}
+		},
+		"feed2a8f32303261": {
+			"parent": "feed892a18eec56e",
+			"name": "InteractionVisRange",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"feed9427850b0779": {
+			"parent": "feed2a8f32303261",
+			"name": "VolumeBox",
+			"factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+			"blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+			"properties": {
+				"m_mTransform": {
+					"type": "SMatrix43",
+					"value": {
+						"rotation": { "x": 0, "y": 0, "z": 0 },
+						"position": { "x": 0, "y": 0, "z": 0 }
+					}
+				},
+				"m_vGlobalSize": {
+					"type": "SVector3",
+					"value": { "x": 6, "y": 6, "z": 3 }
+				},
+				"m_eidParent": {
+					"type": "SEntityTemplateReference",
+					"value": "feed892a18eec56e",
+					"postInit": true
+				}
+			}
+		},
+		"feed41f0a43ea8cb": {
+			"parent": "feed2a8f32303261",
+			"name": "VolumeTriggerCharacter",
+			"factory": "[assembly:/templates/markup/volumetrigger.template?/volumetriggercharacter.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/templates/markup/volumetrigger.template?/volumetriggercharacter.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_Boxes": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["feed9427850b0779"]
+				}
+			}
+		},
+		"feed4bdf0a5c5996": {
+			"parent": "feed2a8f32303261",
+			"name": "ShowInteractionHelper VBO",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aValues": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": [
+						"feed41f0a43ea8cb",
+						"feed4e7ec2c96baa",
+						"feedceb13b85da93",
+						"feed99685050c743"
+					],
+					"postInit": true
+				},
+				"m_bFireOnLevelStart": { "type": "bool", "value": true }
+			},
+			"events": {
+				"OnTrue": { "MakeVisible": ["feedb06608de366d"] },
+				"OnFalse": { "MakeInvisible": ["feedb06608de366d"] }
+			}
+		},
+		"feedceb13b85da93": {
+			"parent": "feed892a18eec56e",
+			"name": "Option_ShowHelpersVBB",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entityblueprint",
+			"properties": { "m_bValue": { "type": "bool", "value": true } }
+		},
+		"feed0f2259a72b59": {
+			"parent": "feedd61a775b9f5a",
+			"name": "VREnabledCondition",
+			"factory": "[modules:/zvrenabledcondition.class].pc_entitytype",
+			"blueprint": "[modules:/zvrenabledcondition.class].pc_entityblueprint"
+		},
+		"feed51f7436c1113": {
+			"parent": "feed892a18eec56e",
+			"name": "Option_OverrideVRDisabledCheck",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_bValue": { "type": "bool", "value": false }
+			}
+		},
+		"feedd61a775b9f5a": {
+			"parent": "feed892a18eec56e",
+			"name": "VR",
+			"factory": "[modules:/zentity.class].pc_entitytype",
+			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+		},
+		"feed99685050c743": {
+			"parent": "feedd61a775b9f5a",
+			"name": "InVR VBO",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_operation.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_aValues": {
+					"type": "TArray<SEntityTemplateReference>",
+					"value": ["feed0f2259a72b59", "feed51f7436c1113"]
+				},
+				"m_eEvaluation": {
+					"type": "ZValueBool_Operation_Signal.EEvaluationType",
+					"value": "ANY"
+				}
+			}
+		}
+	},
+	"propertyOverrides": [],
+	"overrideDeletes": [],
+	"pinConnectionOverrides": [],
+	"pinConnectionOverrideDeletes": [],
+	"externalScenes": [],
+	"subType": "template",
+	"quickEntityVersion": 3.1,
+	"extraFactoryDependencies": [],
+	"extraBlueprintDependencies": [],
+	"comments": []
+}

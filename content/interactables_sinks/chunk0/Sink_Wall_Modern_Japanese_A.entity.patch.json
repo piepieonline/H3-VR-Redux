@@ -1,0 +1,32 @@
+{
+	"tempHash": "0097F6A3C1C042CD",
+	"tbluHash": "000D08C02C541EB4",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"d62d1447e1191d52",
+				{
+					"AddProperty": [
+						"pie_vrInteractionLocation_mTransform",
+						{
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": -0.0,
+									"y": -0.843,
+									"z": 0.953
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
