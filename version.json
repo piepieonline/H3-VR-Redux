@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0",
-    "changelog": "Updated to latest version of Hitman 3 and SMF",
-    "url": "https://github.com/piepieonline/h3-vr-redux/releases/download/v0.1.0/VRRedux.zip"
+    "version": "0.1.1",
+    "changelog": "The virtual keys no longer appear in non-vr mode, and don't duplicate. Fixed options not working properly. Added sinks as world interactables, though some can be hard to reach",
+    "url": "https://github.com/piepieonline/h3-vr-redux/releases/download/v0.1.1/VRRedux.zip"
 }
