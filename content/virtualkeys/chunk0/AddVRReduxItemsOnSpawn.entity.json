@@ -33,9 +33,7 @@
 				"m_fExpireInterval": { "type": "float32", "value": 5 },
 				"m_bSignaling": { "type": "bool", "value": true }
 			},
-			"events": {
-				"Out": { "Poll": ["cafec5202382d655", "cafe51a032ce0b42"] }
-			}
+			"events": { "Out": { "Poll": ["cafea9e20180a8d4"] } }
 		},
 		"feed0770d5d655f8": {
 			"parent": "feedcac9c38a441e",
@@ -85,8 +83,7 @@
 				}
 			},
 			"events": {
-				"Item": { "SetItem": ["feedd6a3757e682e"] },
-				"ItemReady": { "PickupIntoPocket": ["feedd6a3757e682e"] }
+				"ItemSpawned": { "SetItem": ["cafea41b0123023d"] }
 			}
 		},
 		"feed8a01cfd9bc08": {
@@ -155,8 +152,7 @@
 				}
 			},
 			"events": {
-				"Item": { "SetItem": ["feed7fcde06f119f"] },
-				"ItemReady": { "PickupIntoPocket": ["feed7fcde06f119f"] }
+				"ItemSpawned": { "SetItem": ["cafea41b0123023d"] }
 			}
 		},
 		"feedb98efddb8a90": {
@@ -254,6 +250,48 @@
 				"m_bCheckInventory": { "type": "bool", "value": true }
 			},
 			"events": { "OnTrue": { "SetTrue": ["cafe9b5f8afadcc5"] } }
+		},
+		"cafea41b0123023d": {
+			"parent": "feedcac9c38a441e",
+			"name": "HeroItemAction",
+			"factory": "[modules:/zheroitemaction.class].pc_entitytype",
+			"blueprint": "[modules:/zheroitemaction.class].pc_entityblueprint",
+			"events": {
+				"OnItemChanged": {
+					"PickupIntoPocket": ["cafea41b0123023d"]
+				}
+			}
+		},
+		"cafe19c567068c9c": {
+			"parent": "feedcac9c38a441e",
+			"name": "TimerSimple",
+			"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"Delay time (ms)": { "type": "int32", "value": 1000 }
+			},
+			"events": {
+				"Out": { "Poll": ["cafec5202382d655", "cafe51a032ce0b42"] }
+			}
+		},
+		"cafe16ba932b8a8a": {
+			"parent": "feedcac9c38a441e",
+			"name": "VREnabledCondition",
+			"factory": "[modules:/zvrenabledcondition.class].pc_entitytype",
+			"blueprint": "[modules:/zvrenabledcondition.class].pc_entityblueprint"
+		},
+		"cafea9e20180a8d4": {
+			"parent": "feedcac9c38a441e",
+			"name": "Is VR Active VBP",
+			"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+			"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+			"properties": {
+				"m_rValueEntity": {
+					"type": "SEntityTemplateReference",
+					"value": "cafe16ba932b8a8a"
+				}
+			},
+			"events": { "PollTrue": { "In": ["cafe19c567068c9c"] } }
 		}
 	},
 	"propertyOverrides": [],
